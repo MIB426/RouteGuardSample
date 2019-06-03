@@ -1,4 +1,40 @@
-<p>
-  feature works!
-</p>
+<!--The content below is only a placeholder and can be replaced.-->
 
+<div class="success">
+  <p>明明設好了路由卻不知道發生了什麼問題，要追還真不知道要從哪裡追起。</p>
+  <p>不過 Angular 依舊貼心地提供了一個功能給我們，只要在 RouterModule 的 forRoot 函式裡多傳入一個 <strong><code>enableTracing: true</code></strong> 的物件</p>
+  <img src='../assets/img/img1.PNG'>
+
+
+</div>
+<hr>
+<div class="success">
+<p>另外加上<strong><code> [routerLinkActive]="'active'"</code></strong>， Angular 的路由機制會自動幫我們加上該類別。</p>
+<p>果我們今天不想要連父層也一起套用的話，我們可以在父層的連結上多增加 <strong><code> [routerLinkActiveOptions]="{{ '{' }}exact: true{{'}'}}" </code></strong>的設定即可</p>
+</div>
+<hr>
+
+<div class="success">
+  <p>產生一個含有路由的 NgModule <strong>ng generate module XXXX --routing</strong></p>
+</div>
+<hr>
+<div class="success">
+    <p>把<strong>延遲載入</strong>調整為<strong>預先載入</strong></p>
+    <p>說起來其實也很簡單，只要我們找到我們最上層的路由模組 （沒意外的話，通常都是 AppRoutingModule） ，然後先從 @angular/router 引入一個名為 PreloadAllModules 的模組</p>
+
+</div>
+<hr>
+<div class="success">
+<h1>Resolve</h1>
+<p>在實務應用上，我們常常會遇到在導頁的時候需要連帶地傳遞一些資料給該頁面。但如果是用昨天所分享過的方式，不管是 Query String 表示法還是 matrix URL notation 表示法，其實都沒辦法傳遞太複雜的資料。甚至有時候是需要先呼叫 API 跟伺服器拿資料的。
+</p>
+<p>像這種時候其實就很適合使用路由的 Resolve 功能來做這樣的處理。</p>
+<p>假設我們有個商品細節頁面用來呈現商品的細節，所以我們會從商品清單頁面點選了某一筆的商品之後，將商品 id 帶往商品細節頁。</p>
+<a href='https://ithelp.ithome.com.tw/articles/10209259'>Sample</a><br>
+<a href='https://alligator.io/angular/route-resolvers/'>Sample2</a>
+</div>
+
+
+
+
+<img src='../assets/img/img2.PNG'>

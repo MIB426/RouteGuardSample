@@ -1,17 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="success">
-  <p>明明設好了路由卻不知道發生了什麼問題，要追還真不知道要從哪裡追起。</p>
-  <p>不過 Angular 依舊貼心地提供了一個功能給我們，只要在 RouterModule 的 forRoot 函式裡多傳入一個 <strong>enableTracing: true</strong> 的物件</p>
-  <img src='../assets/img/img1.PNG'>
-  <p>另外加上 [routerLinkActive] ， Angular 的路由機制會自動幫我們加上該類別。</p>
-  <p>產生一個含有路由的 NgModule <strong>ng generate module XXXX --routing</strong></p>
 
-  <img src='../assets/img/img2.PNG'>
-</div>
-<hr>
-<div class="success">
-    <p>把<strong>延遲載入</strong>調整為<strong>預先載入</strong></p>
-    <p>說起來其實也很簡單，只要我們找到我們最上層的路由模組 （沒意外的話，通常都是 AppRoutingModule） ，然後先從 @angular/router 引入一個名為 PreloadAllModules 的模組</p>
+<button routerLink="/feature">Summary</button>&nbsp;&nbsp;<button routerLink="/login">Login</button>
 
-</div>
 <router-outlet></router-outlet>
